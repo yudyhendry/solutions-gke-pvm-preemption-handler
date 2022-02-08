@@ -52,10 +52,10 @@ spec:
            requiredDuringSchedulingIgnoredDuringExecution:
              nodeSelectorTerms:
              - matchExpressions:
-               - key: cloud.google.com/gke-preemptible
+               - key: cloud.google.com/gke-spot
                  operator: DoesNotExist
       containers:
-      - image: gcr.io/cloud-solutions-images/hello-world
+      - image: gcr.io/[PROJECT_ID]/hello-world
         imagePullPolicy: Always
         name: hello-app
         ports:
@@ -211,10 +211,10 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
              - matchExpressions:
-               - key: cloud.google.com/gke-preemptible
+               - key: cloud.google.com/gke-spot
                  operator: Exists
       containers:
-      - image: gcr.io/cloud-solutions-images/hello-world
+      - image: gcr.io/[PROJECT_ID]/hello-world
         imagePullPolicy: Always
         name: hello-app
         ports:

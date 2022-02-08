@@ -41,7 +41,7 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: cloud.google.com/gke-preemptible
+              - key: cloud.google.com/gke-spot
                 operator: Exists
       containers:
       - env:
